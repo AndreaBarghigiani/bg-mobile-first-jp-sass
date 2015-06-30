@@ -1,0 +1,61 @@
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	background-color: #fff;
+	text-align: center;
+	.wrap {
+		padding: 20px 0;
+	}
+}
+
+/* Site Title and Description
+--------------------------------------------- */
+
+.site-title {
+	font-size: 30px;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	a {
+		color: #333;
+		&:hover {
+			color: #333;
+		}
+	}
+}
+
+.header-image {
+	.site-title > a {
+		background-position: center center !important;
+		background-size: 300px 57px !important;
+		float: left;
+		min-height: 57px;
+		width: 100%;
+	}
+	.site-description, .site-title {
+		display: block;
+		text-indent: -9999px;
+	}
+}
+
+.site-description {
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 10px;
+	line-height: 1.2;
+}
+
+.site-title {
+	line-height: 1.2;
+}
+
+/* Header Widget Area
+--------------------------------------------- */
+
+.header-widget-area .widget_text {
+	margin-top: 10px;
+	p {
+		margin-bottom: 0;
+	}
+}
