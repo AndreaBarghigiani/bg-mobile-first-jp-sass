@@ -5,52 +5,39 @@
 --------------------------------------------- */
 
 body {
-	background-color: #f5f5f5;
-	color: #333;
-	font-family: Lato, sans-serif;
-	font-size: 18px;
-	font-weight: 400;
+	background-color: $color-site-bg;
+	color: $color-body;
+	font-size: $base-font-size;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
 	line-height: 1.625;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 }
 
-a, button {
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition: all 0.1s ease-in-out;
-	-ms-transition: all 0.1s ease-in-out;
-	-o-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img{
+	@include transition(all, 0.1s, ease-in-out);
 }
 
-input {
-	&:focus, &[type="button"], &[type="reset"], &[type="submit"] {
-		-webkit-transition: all 0.1s ease-in-out;
-		-moz-transition: all 0.1s ease-in-out;
-		-ms-transition: all 0.1s ease-in-out;
-		-o-transition: all 0.1s ease-in-out;
-		transition: all 0.1s ease-in-out;
-	}
-}
-
-textarea:focus, .button, .gallery img {
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition: all 0.1s ease-in-out;
-	-ms-transition: all 0.1s ease-in-out;
-	-o-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
-}
-
-::-moz-selection, ::selection {
+::-moz-selection,
+::selection {
 	background-color: #333;
 	color: #fff;
 }
 
 a {
-	color: #e5554e;
+	color: $color-link;
 	text-decoration: none;
 	&:hover {
-		color: #333;
+		color: $color-link-hover;
 	}
 }
 
@@ -59,7 +46,8 @@ p {
 	padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
 	margin: 0;
 	padding: 0;
 }
@@ -68,11 +56,15 @@ li {
 	list-style-type: none;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: 700;
 }
 
-blockquote, cite, em, i {
+blockquote,
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -93,41 +85,30 @@ blockquote {
 --------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-	color: #333;
-	font-family: Lato, sans-serif;
-	font-weight: 700;
-	line-height: 1.2;
+	color: $color-body;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	line-height: $heading-font-line-height;
 	margin: 0 0 20px;
 }
 
-h1 {
-	font-size: 36px;
-}
+.h1 { font-size: 200%; }
+.h2 { font-size: 166.6%; }
+.h3 { font-size: 133.3%; }
+.h4 { font-size: 111.1%; }
+.h5 { font-size: 100%; }
+.h6 { font-size: 88.8%; }
 
-h2 {
-	font-size: 30px;
-}
-
-h3 {
-	font-size: 24px;
-}
-
-h4 {
-	font-size: 20px;
-}
-
-h5 {
-	font-size: 18px;
-}
-
-h6 {
-	font-size: 16px;
-}
 
 /* Objects
 --------------------------------------------- */
 
-embed, iframe, img, object, video, .wp-caption {
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
 	max-width: 100%;
 }
 
@@ -198,7 +179,9 @@ img {
 /* Forms
 --------------------------------------------- */
 
-input, select, textarea {
+input,
+select,
+textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-radius: 3px;
@@ -216,7 +199,9 @@ input:focus, textarea:focus {
 }
 
 input {
-	&[type="checkbox"], &[type="image"], &[type="radio"] {
+	&[type="checkbox"],
+	&[type="image"],
+	&[type="radio"] {
 		width: auto;
 	}
 }
@@ -234,22 +219,12 @@ input {
 	-webkit-font-smoothing: antialiased;
 }
 
-button {
-	background-color: #333;
-	border: 0;
-	border-radius: 3px;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 400;
-	letter-spacing: 1px;
-	padding: 16px 24px;
-	text-transform: uppercase;
-	width: auto;
-}
-
+button,
+.button,
 input {
-	&[type="button"], &[type="reset"], &[type="submit"] {
+	&[type="button"],
+	&[type="reset"],
+	&[type="submit"] {
 		background-color: #333;
 		border: 0;
 		border-radius: 3px;
@@ -264,52 +239,32 @@ input {
 	}
 }
 
-.button {
-	background-color: #333;
-	border: 0;
-	border-radius: 3px;
-	color: #fff;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 400;
-	letter-spacing: 1px;
-	padding: 16px 24px;
-	text-transform: uppercase;
-	width: auto;
-}
-
 .footer-widgets {
 	button {
-		background-color: #e5554e;
-		color: #fff;
+		@include background-text-combo(#e5554e, #fff);
 	}
 	input {
 		&[type="button"], &[type="reset"], &[type="submit"] {
-			background-color: #e5554e;
-			color: #fff;
+			@include background-text-combo(#e5554e, #fff);
 		}
 	}
 	.button {
-		background-color: #e5554e;
-		color: #fff;
+		@include background-text-combo(#e5554e, #fff);
 	}
 }
 
 button:hover {
-	background-color: #e5554e;
-	color: #fff;
+	@include background-text-combo(#e5554e, #fff);
 }
 
 input:hover {
 	&[type="button"], &[type="reset"], &[type="submit"] {
-		background-color: #e5554e;
-		color: #fff;
+		@include background-text-combo(#e5554e, #fff);
 	}
 }
 
 .button:hover {
-	background-color: #e5554e;
-	color: #fff;
+	@include background-text-combo(#e5554e, #fff);
 }
 
 .entry-content .button:hover {
@@ -323,13 +278,11 @@ input:hover {
 	}
 	input:hover {
 		&[type="button"], &[type="reset"], &[type="submit"] {
-			background-color: #fff;
-			color: #333;
+			@include background-text-combo(#fff, #333);
 		}
 	}
 	.button:hover {
-		background-color: #fff;
-		color: #333;
+		@include background-text-combo(#fff, #333);
 	}
 }
 
