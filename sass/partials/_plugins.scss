@@ -12,7 +12,7 @@
 }
 
 .sidebar .widget.enews-widget {
-	background-color: #333;
+	background-color: $color-button-bg;
 	padding: 40px;
 }
 
@@ -24,14 +24,12 @@
 	font-size: 16px;
 	margin-bottom: 16px;
 	&[type="submit"] {
-		background-color: #e5554e;
-		color: #fff;
+		@include background-text-combo($color-button-hover, #fff);
 		margin: 0;
 		width: 100%;
 	}
 	&:hover[type="submit"] {
-		background-color: #fff;
-		color: #333;
+		@include background-text-combo(#fff, $color-body);
 	}
 }
 
@@ -47,12 +45,13 @@
 		margin-bottom: 20px;
 	}
 	a {
-		&.count, &.share {
+		&.count,
+		&.share {
 			border: none;
-			font-weight: 400;
+			font-weight: $base-font-weight;
 			&:hover {
 				border: none;
-				font-weight: 400;
+				font-weight: $base-font-weight;
 			}
 		}
 	}
@@ -65,45 +64,36 @@
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 		}
-		.facebook .count, .googlePlus .count, .linkedin .count, .pinterest .count, .stumbleupon .count, .twitter .count {
-			color: #333;
+		.facebook .count,
+		.googlePlus .count,
+		.linkedin .count,
+		.pinterest .count,
+		.stumbleupon .count,
+		.twitter .count {
+			color: $color-body;
 			border: 1px solid #333;
 			&:hover {
-				color: #333;
+				color: $color-body;
 				border: 1px solid #333;
 			}
 		}
-		.facebook {
-			.share, &:hover .count {
-				background: #333 !important;
-			}
-		}
-		.googlePlus {
-			.share, &:hover .count {
-				background: #333 !important;
-			}
-		}
-		.linkedin {
-			.share, &:hover .count {
-				background: #333 !important;
-			}
-		}
-		.pinterest {
-			.share, &:hover .count {
-				background: #333 !important;
-			}
-		}
-		.stumbleupon {
-			.share, &:hover .count {
-				background: #333 !important;
-			}
-		}
+		.facebook,
+		.googlePlus,
+		.linkedin,
+		.pinterest,
+		.stumbleupon,
 		.twitter {
-			.share, &:hover .count {
-				background: #333 !important;
+			.share,
+			&:hover .count {
+				background: $color-button-bg !important;
 			}
 		}
-		.facebook:hover .count, .googlePlus:hover .count, .linkedin:hover .count, .pinterest:hover .count, .stumbleupon:hover .count, .twitter:hover .count {
+		.facebook:hover .count,
+		.googlePlus:hover .count,
+		.linkedin:hover .count,
+		.pinterest:hover .count,
+		.stumbleupon:hover .count,
+		.twitter:hover .count {
 			color: #fff;
 		}
 	}

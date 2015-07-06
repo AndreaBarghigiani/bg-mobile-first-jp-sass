@@ -11,29 +11,25 @@
 		text-align: left;
 	}
 	a {
-		color: #333;
+		color: $color-menu-link;
 		display: block;
 		padding: 20px;
 		&:hover {
-			color: #e5554e;
+			color: $color-link;
 		}
 	}
 	.current-menu-item > a {
-		color: #e5554e;
+		color: $color-current-menu;
 	}
 	.sub-menu {
 		.current-menu-item > a:hover {
-			color: #e5554e;
+			color: $color-current-menu;
 		}
 		background-color: rgba(0, 0, 0, 0.05);
 		left: auto;
 		opacity: 1;
 		position: relative;
-		-webkit-transition: opacity .4s ease-in-out;
-		-moz-transition: opacity .4s ease-in-out;
-		-ms-transition: opacity .4s ease-in-out;
-		-o-transition: opacity .4s ease-in-out;
-		transition: opacity .4s ease-in-out;
+		@include transition(opacity, 0.4s, ease-in-out);
 		z-index: 99;
 		a {
 			font-size: 14px;
@@ -69,18 +65,18 @@
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: #333;
+	background-color: $color-button-bg;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	.genesis-nav-menu a {
-		color: #fff;
+		color: $color-light-link;
 	}
 	.sub-menu {
 		background-color: rgba(255, 255, 255, 0.05);
 	}
 	.genesis-nav-menu {
 		a:hover, .current-menu-item > a, .sub-menu .current-menu-item > a:hover {
-			color: #e5554e;
+			color: $color-current-menu;
 		}
 	}
 }
@@ -89,7 +85,7 @@
 --------------------------------------------- */
 
 .nav-secondary {
-	background-color: #fff;
+	background-color: $color-container-bg;
 	border-bottom: 1px solid #eee;
 	padding-bottom: 10px;
 	padding-top: 10px;
@@ -100,29 +96,7 @@
 
 .responsive-menu-icon {
 	cursor: pointer;
-}
-
-.responsive-menu {
-	.menu-item-has-children {
-		cursor: pointer;
-	}
-	.menu-item {
-		display: block;
-	}
-}
-
-.responsive-menu-icon {
 	display: block;
-}
-
-.responsive-menu {
-	display: none;
-	> .menu-item > .sub-menu {
-		display: none;
-	}
-}
-
-.responsive-menu-icon {
 	text-align: center;
 	&::before {
 		color: #000;
@@ -134,13 +108,17 @@
 	}
 }
 
-.nav-primary {
-	.responsive-menu-icon::before, .responsive-menu > .menu-item-has-children:before {
-		color: #fff;
-	}
-}
-
 .responsive-menu {
+	display: none;
+	.menu-item-has-children {
+		cursor: pointer;
+	}
+	.menu-item {
+		display: block;
+	}
+	> .menu-item > .sub-menu {
+		display: none;
+	}
 	> .menu-item-has-children:before {
 		content: "\f347";
 		float: right;
@@ -156,5 +134,12 @@
 	}
 	.sub-menu .sub-menu {
 		margin: 0;
+	}
+}
+
+.nav-primary {
+	.responsive-menu-icon::before,
+	.responsive-menu > .menu-item-has-children:before {
+		color: $color-light-link;
 	}
 }

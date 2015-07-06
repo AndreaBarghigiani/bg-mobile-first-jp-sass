@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
+	background-color: $color-container-bg;
 	text-align: center;
 	.wrap {
 		padding: 20px 0;
@@ -17,10 +17,11 @@
 	letter-spacing: 1px;
 	margin-bottom: 0;
 	text-transform: uppercase;
+	line-height: $heading-font-line-height;
 	a {
-		color: #333;
+		color: $color-link-hover;
 		&:hover {
-			color: #333;
+			color: $color-link-hover;
 		}
 	}
 }
@@ -33,21 +34,18 @@
 		min-height: 57px;
 		width: 100%;
 	}
-	.site-description, .site-title {
+	.site-description,
+	.site-title {
 		display: block;
 		text-indent: -9999px;
 	}
 }
 
 .site-description {
-	font-size: 18px;
-	font-weight: 400;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
 	margin-bottom: 10px;
-	line-height: 1.2;
-}
-
-.site-title {
-	line-height: 1.2;
+	line-height: $heading-font-line-height;
 }
 
 /* Header Widget Area

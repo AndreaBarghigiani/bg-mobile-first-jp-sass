@@ -30,7 +30,7 @@ textarea:focus,
 ::-moz-selection,
 ::selection {
 	background-color: #333;
-	color: #fff;
+	color: $color-light-link;
 }
 
 a {
@@ -182,7 +182,7 @@ img {
 input,
 select,
 textarea {
-	background-color: #fff;
+	background-color: $color-container-bg;
 	border: $base-border;
 	border-radius: 3px;
 	color: $color-body;
@@ -224,7 +224,7 @@ input {
 	&[type="button"],
 	&[type="reset"],
 	&[type="submit"] {
-		@include background-text-combo(#333, #fff);
+		@include background-text-combo($color-button-bg, $color-light-link);
 		border: 0;
 		border-radius: 3px;
 		cursor: pointer;
@@ -240,45 +240,45 @@ input {
 .footer-widgets {
 	button,
 	.button {
-		@include background-text-combo(#e5554e, #fff);
+		@include background-text-combo($color-link, $color-light-link);
 	}
 	input {
 		&[type="button"],
 		&[type="reset"],
 		&[type="submit"] {
-			@include background-text-combo(#e5554e, #fff);
+			@include background-text-combo($color-link, $color-light-link);
 		}
 	}
 }
 
 button:hover {
-	@include background-text-combo(#e5554e, #fff);
+	@include background-text-combo($color-button-hover, $color-light-link);
 }
 
 input:hover {
 	&[type="button"], &[type="reset"], &[type="submit"] {
-		@include background-text-combo(#e5554e, #fff);
+		@include background-text-combo($color-button-hover, $color-light-link);
 	}
 }
 
 .button:hover {
-	@include background-text-combo(#e5554e, #fff);
+	@include background-text-combo($color-button-hover, $color-light-link);
 }
 
 .entry-content .button:hover {
-	color: #fff;
+	color: $color-light-link;
 }
 
 .footer-widgets {
 	button:hover,
 	.button:hover {
-		@include background-text-combo(#fff, #333);
+		@include background-text-combo($color-light-link, $color-link-hover);
 	}
 	input:hover {
 		&[type="button"],
 		&[type="reset"],
 		&[type="submit"] {
-			@include background-text-combo(#fff, #333);
+			@include background-text-combo($color-light-link, $color-link-hover);
 		}
 	}
 }
@@ -320,5 +320,5 @@ td {
 }
 
 th {
-	font-weight: 400;
+	font-weight: $base-font-weight;
 }

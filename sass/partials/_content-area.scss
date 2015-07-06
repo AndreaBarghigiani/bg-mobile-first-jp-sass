@@ -63,7 +63,8 @@ p.entry-meta {
 	margin-bottom: 60px;
 }
 
-.entry-categories, .entry-tags {
+.entry-categories,
+.entry-tags {
 	display: block;
 }
 
@@ -112,7 +113,8 @@ p.comment-meta {
 }
 
 .entry-comments {
-	.comment, .comment-reply {
+	.comment,
+	.comment-reply {
 		margin-bottom: 40px;
 	}
 }
@@ -137,7 +139,8 @@ p.comment-meta {
 	font-size: 16px;
 }
 
-.comment-notes, .entry-pings .reply {
+.comment-notes,
+.entry-pings .reply {
 	display: none;
 }
 
@@ -155,7 +158,8 @@ p {
 }
 
 .entry-comments {
-	.children .comment, .comment-author {
+	.children .comment,
+	.comment-author {
 		margin: 0;
 	}
 	.comment {

@@ -8,7 +8,8 @@
 	float: left;
 }
 
-.alignleft .avatar, .author-box .avatar {
+.alignleft .avatar,
+.author-box .avatar {
 	margin-right: 24px;
 }
 
@@ -34,14 +35,15 @@
 	margin-bottom: 30px;
 }
 
-.archive-description, .author-box {
-	border-bottom: 5px solid #f5f5f5;
+.archive-description,
+.author-box {
+	border-bottom: 5px solid $color-site-bg;
 	margin-bottom: 60px;
 	padding-bottom: 30px;
 }
 
 .single .author-box {
-	border-top: 5px solid #f5f5f5;
+	border-top: 5px solid $color-site-bg;
 	padding-top: 30px;
 }
 
@@ -50,7 +52,8 @@
 	margin-bottom: 4px;
 }
 
-.archive-description p:last-child, .author-box p:last-child {
+.archive-description p:last-child,
+.author-box p:last-child {
 	margin-bottom: 0;
 }
 
@@ -91,16 +94,16 @@
 .entry-title {
 	font-size: 30px;
 	a {
-		color: #333;
+		color: $color-body;
 	}
 }
 
 .sidebar .widget-title a {
-	color: #333;
+	color: $color-body;
 }
 
 .entry-title a:hover {
-	color: #e5554e;
+	color: $color-link;
 }
 
 .widget-title {
@@ -109,7 +112,7 @@
 }
 
 .footer-widgets .widget-title {
-	color: #fff;
+	color: $color-light-link;
 }
 
 /* WordPress
@@ -136,25 +139,33 @@ a {
 }
 
 a {
-	&.alignleft, &.alignnone, &.alignright {
+	&.alignleft,
+	&.alignnone,
+	&.alignright {
 		max-width: 100%;
 	}
 }
 
-img.centered, .aligncenter {
+img.centered,
+.aligncenter {
 	display: block;
 	margin: 0 auto 24px;
 }
 
-img.alignnone, .alignnone {
+img.alignnone,
+.alignnone {
 	margin-bottom: 12px;
 }
 
-a.alignleft, img.alignleft, .wp-caption.alignleft {
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
 	margin: 0 24px 24px 0;
 }
 
-a.alignright, img.alignright, .wp-caption.alignright {
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
 	margin: 0 0 24px 24px;
 }
 
