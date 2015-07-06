@@ -84,7 +84,7 @@ blockquote {
 /* Headings
 --------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	color: $color-body;
 	font-family: $heading-font-family;
 	font-weight: $heading-font-weight;
@@ -92,12 +92,12 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 20px;
 }
 
-.h1 { font-size: 200%; }
-.h2 { font-size: 166.6%; }
-.h3 { font-size: 133.3%; }
-.h4 { font-size: 111.1%; }
-.h5 { font-size: 100%; }
-.h6 { font-size: 88.8%; }
+h1, .h1 { font-size: 200%; }
+h2, .h2 { font-size: 166.6%; }
+h3, .h3 { font-size: 133.3%; }
+h4, .h4 { font-size: 111.1%; }
+h5, .h5 { font-size: 100%; }
+h6, .h6 { font-size: 88.8%; }
 
 
 /* Objects
@@ -168,7 +168,7 @@ img {
 }
 
 .gallery img {
-	border: 1px solid #ddd;
+	border: $base-border;
 	height: auto;
 	padding: 4px;
 	&:hover {
@@ -183,17 +183,18 @@ input,
 select,
 textarea {
 	background-color: #fff;
-	border: 1px solid #ddd;
+	border: $base-border;
 	border-radius: 3px;
-	color: #333;
-	font-size: 18px;
-	font-weight: 400;
+	color: $color-body;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
 	padding: 16px;
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
 	border: 1px solid #999;
 	outline: none;
 }
@@ -206,17 +207,15 @@ input {
 	}
 }
 
-::-moz-placeholder {
-	color: #333;
-	font-weight: 400;
-	opacity: 1;
+::-moz-placeholder,
+::-webkit-input-placeholder {
+	color: $color-body;
+	font-weight: $base-font-weight;
 	-webkit-font-smoothing: antialiased;
 }
 
-::-webkit-input-placeholder {
-	color: #333;
-	font-weight: 400;
-	-webkit-font-smoothing: antialiased;
+::-moz-placeholder {
+	opacity: 1;
 }
 
 button,
@@ -225,13 +224,12 @@ input {
 	&[type="button"],
 	&[type="reset"],
 	&[type="submit"] {
-		background-color: #333;
+		@include background-text-combo(#333, #fff);
 		border: 0;
 		border-radius: 3px;
-		color: #fff;
 		cursor: pointer;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: $base-font-weight;
 		letter-spacing: 1px;
 		padding: 16px 24px;
 		text-transform: uppercase;
@@ -240,16 +238,16 @@ input {
 }
 
 .footer-widgets {
-	button {
+	button,
+	.button {
 		@include background-text-combo(#e5554e, #fff);
 	}
 	input {
-		&[type="button"], &[type="reset"], &[type="submit"] {
+		&[type="button"],
+		&[type="reset"],
+		&[type="submit"] {
 			@include background-text-combo(#e5554e, #fff);
 		}
-	}
-	.button {
-		@include background-text-combo(#e5554e, #fff);
 	}
 }
 
@@ -272,17 +270,16 @@ input:hover {
 }
 
 .footer-widgets {
-	button:hover {
-		background-color: #fff;
-		color: #333;
-	}
-	input:hover {
-		&[type="button"], &[type="reset"], &[type="submit"] {
-			@include background-text-combo(#fff, #333);
-		}
-	}
+	button:hover,
 	.button:hover {
 		@include background-text-combo(#fff, #333);
+	}
+	input:hover {
+		&[type="button"],
+		&[type="reset"],
+		&[type="submit"] {
+			@include background-text-combo(#fff, #333);
+		}
 	}
 }
 
@@ -291,7 +288,8 @@ input:hover {
 }
 
 input[type="search"] {
-	&::-webkit-search-cancel-button, &::-webkit-search-results-button {
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button {
 		display: none;
 	}
 }
@@ -308,15 +306,16 @@ table {
 }
 
 tbody {
-	border-bottom: 1px solid #ddd;
+	border-bottom: $base-border;
 }
 
-td, th {
+td,
+th {
 	text-align: left;
 }
 
 td {
-	border-top: 1px solid #ddd;
+	border-top: $base-border;
 	padding: 6px 0;
 }
 
