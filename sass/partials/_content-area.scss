@@ -40,7 +40,7 @@
 		margin-bottom: 0;
 	}
 	code {
-		background-color: #333;
+		background-color: $color-button-bg;
 		color: #ddd;
 	}
 }
@@ -89,19 +89,19 @@ p.entry-meta {
 	li {
 		display: inline;
 		a {
-			background-color: #333;
-			color: #fff;
+			background-color: $color-button-bg;
+			color: $color-light-link;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 16px;
 			padding: 8px 12px;
 			&:hover {
-				background-color: #e5554e;
+				background-color: $color-button-hover;
 			}
 		}
 	}
 	.active a {
-		background-color: #e5554e;
+		background-color: $color-button-hover;
 	}
 }
 
@@ -121,18 +121,26 @@ p.comment-meta {
 
 .comment-respond {
 	margin-bottom: 60px;
+	padding-top: 60px;
 }
 
 .entry-comments .comment:last-child {
 	margin-bottom: 0;
 }
 
-.comment-respond {
-	padding-top: 60px;
-}
-
 .entry-comments {
 	padding-top: 20px;
+	.comment {
+		border-bottom: 5px solid #f5f5f5;
+		clear: both;
+	}
+	.comment-author {
+		margin: 0;
+	}
+	.children .comment {
+		margin: 0;
+		border: none;
+	}
 }
 
 .comment-header {
@@ -144,29 +152,12 @@ p.comment-meta {
 	display: none;
 }
 
-.entry-comments .comment {
-	border-bottom: 5px solid #f5f5f5;
-}
-
 p {
 	&.comment-form-comment {
 		margin-bottom: 20px;
 	}
 	&.form-submit {
 		margin: 0;
-	}
-}
-
-.entry-comments {
-	.children .comment,
-	.comment-author {
-		margin: 0;
-	}
-	.comment {
-		clear: both;
-	}
-	.children .comment {
-		border: none;
 	}
 }
 

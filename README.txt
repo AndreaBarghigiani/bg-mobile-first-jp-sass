@@ -1,10 +1,10 @@
-BG MOBILE FIRST THEME
-http://briangardner.com/themes/mobile-first/
+BG MOBILE FIRST JP SASS THEME
+http://pmgllc.github.io/bg-mobile-first-jp-sass
 
 INSTALL
-1. Upload the BG Mobile First theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
+1. Upload the BG Mobile First JP Sass theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
 2. Go to your WordPress dashboard and select Appearance.
-3. Activate the BG Mobile First theme.
+3. Activate the BG Mobile First JP Sass theme.
 4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
 
 WIDGET AREAS
@@ -18,20 +18,5 @@ You can find some really great free textures to use at http://subtlepatterns.com
 
 CHANGELOG
 
-= 1.0 =
-* Initial release
-
-= 1.0.1 =
-* Add README.txt file
-* Add sample.xml file
-* Add CSS for Genesis Simple Share
-* Update screenshot.png
-
-= 1.0.2 =
-* Replace 300 font-weight with 400
-
-= 1.0.3 =
-* Added @2x retina custom header
-
 = 1.0.4 =
-* Added sticky message widget area
+* Initial release to match BG Mobile First Theme without Sass
