@@ -2,21 +2,21 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #333;
+	background-color: $color-dark-bg;
 	clear: both;
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-top: 60px;
-	color: #999;
+	color: $color-light-text;
 	a {
-		color: #999;
+		color: $color-light-text;
 	}
 	input {
 		border: 1px solid #333;
 	}
 	a {
 		&.button, &:hover {
-			color: #fff;
+			color: $color-light-link;
 		}
 	}
 	li {

@@ -7,12 +7,12 @@
 .enews-widget {
 	color: #fff;
 	.widget-title {
-		color: #fff;
+		color: $color-light-link;
 	}
 }
 
 .sidebar .widget.enews-widget {
-	background-color: $color-button-bg;
+	background-color: $color-dark-bg;
 	padding: 40px;
 }
 
@@ -94,7 +94,7 @@
 		.pinterest:hover .count,
 		.stumbleupon:hover .count,
 		.twitter:hover .count {
-			color: #fff;
+			color: $color-light-link;
 		}
 	}
 }
