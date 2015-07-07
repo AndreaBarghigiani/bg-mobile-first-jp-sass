@@ -1,0 +1,59 @@
+/* Site Header
+---------------------------------------------------------------------------------------------------- */
+
+.site-header {
+	background-color: $color-container-bg;
+	text-align: center;
+	.wrap {
+		padding: 20px 0;
+	}
+}
+
+/* Site Title and Description
+--------------------------------------------- */
+
+.site-title {
+	font-size: 30px;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	line-height: $heading-font-line-height;
+	a {
+		color: $color-link-hover;
+		&:hover {
+			color: $color-link-hover;
+		}
+	}
+}
+
+.header-image {
+	.site-title > a {
+		background-position: center center !important;
+		background-size: 300px 57px !important;
+		float: left;
+		min-height: 57px;
+		width: 100%;
+	}
+	.site-description,
+	.site-title {
+		display: block;
+		text-indent: -9999px;
+	}
+}
+
+.site-description {
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	margin-bottom: 10px;
+	line-height: $heading-font-line-height;
+}
+
+/* Header Widget Area
+--------------------------------------------- */
+
+.header-widget-area .widget_text {
+	margin-top: 10px;
+	p {
+		margin-bottom: 0;
+	}
+}
