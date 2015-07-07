@@ -1,6 +1,12 @@
 BG MOBILE FIRST JP SASS THEME
 http://pmgllc.github.io/bg-mobile-first-jp-sass
 
+
+=============  NOTE: =============
+YOU MUST COMPILE A STYLE.CSS FILE.
+THIS IS A DEVELOPER TOOL.
+
+
 INSTALL
 1. Upload the BG Mobile First JP Sass theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
 2. Go to your WordPress dashboard and select Appearance.
