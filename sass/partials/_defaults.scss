@@ -112,7 +112,9 @@ video,
 	max-width: 100%;
 }
 
-img {
+img,
+figure {
+	margin: 0;
 	height: auto;
 }
 
