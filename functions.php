@@ -11,8 +11,8 @@ define( 'CHILD_THEME_VERSION', '1.0.4' );
 add_action( 'wp_enqueue_scripts', 'mobile_first_sass_scripts_styles' );
 function mobile_first_sass_scripts_styles() {
 
-	wp_enqueue_script( 'mobile-first-sass-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0' );
-	wp_enqueue_script( 'mobile-first-sass-sticky-message', get_bloginfo( 'stylesheet_directory' ) . '/js/sticky-message.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_script( 'mobile-first-sass-responsive-menu', get_bloginfo( 'stylesheet_directory' ) . '/js/min/responsive-menu.min.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_script( 'mobile-first-sass-sticky-message', get_bloginfo( 'stylesheet_directory' ) . '/js/min/sticky-message.min.js', array( 'jquery' ), '1.0.0' );
 
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700', array(), CHILD_THEME_VERSION );

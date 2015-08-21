@@ -1,0 +1,29 @@
+{
+  "name": "bg-mobile-first-jp-sass",
+  "version": "1.0.0",
+  "description": "Starter theme for the Genesis Framework based on a mobile-first apporach, Sassified for developers",
+  "author": "Jesse Petersen",
+  "homepage": "http://www.petersenmediagroup.com",
+  "bugs": "https://github.com/pmgllc/bg-mobile-first-jp-sass/issues",
+  "repository"  : {
+    "type": "git",
+    "url": "git@github.com:pmgllc/bg-mobile-first-jp-sass.git"
+  },
+  "licenses": [
+    {
+      "type": "GPL-3.0+",
+      "url": "http://www.gnu.org/licenses/gpl-3.0.txt"
+    }
+  ],
+  "devDependencies": {
+    "grunt"               : "latest",
+    "grunt-contrib-clean" : "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch" : "latest",
+    "grunt-contrib-sass"  : "latest",
+    "grunt-contrib-cssmin": "latest",
+    "load-grunt-tasks"    : "latest",
+    "grunt-autoprefixer"  : "latest",
+    "grunt-wp-i18n"		    : "latest"
+  }
+}
